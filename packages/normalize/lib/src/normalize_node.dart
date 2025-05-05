@@ -116,7 +116,7 @@ Object? normalizeNode({
     if (dataId != null) existingNormalizedData = config.read(dataId);
 
     final existingMap = existingNormalizedData is Map
-    ? Map.from(existingNormalizedData)
+    ? Map<String, dynamic>.from(existingNormalizedData)
     : <String, dynamic>{};
 
     final mergedData = deepMerge(
